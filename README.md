@@ -8,7 +8,7 @@ This is a repository for the Getting and Cleaning Data Coursera course project t
      <br/>
   <ul>
   
- <li>Download and unzip the data for this project from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)</li>
+ <li>Download and unzip the data for this project from https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip</li>
  
  
  
@@ -24,7 +24,7 @@ This is a repository for the Getting and Cleaning Data Coursera course project t
    
     
  
- <li> To read in the cleaned data created for this project in R, use
+ <li> To read in the cleaned data, which is the average of each variable for each activity and each subject, created for this project in R, use
  tidy <- read.table("merged_and_cleaned_data_average_activity.txt"). 
  </li>
  
