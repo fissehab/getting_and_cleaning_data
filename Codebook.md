@@ -10,6 +10,8 @@ This is a cood book that describes the variables, the data and the procedures us
   
  The Data for this project is from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
  
+ Original description can be found from: http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
+ 
  
  <mark style="color:blue">The file run_analysis.R does the following to clean up the data:</mark>
 
