@@ -11,7 +11,6 @@ rm(list=ls())  # clear workspace
 # Load required libraries
 
 require(downloader)
-library(knitr)
 library(plyr)
 
 # Download the dataset as Dataset.zip.
