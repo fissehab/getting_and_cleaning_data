@@ -4,14 +4,14 @@ This is a cood book that describes the variables, the data and the procedures us
               <br/>
               <br/>
   
-  <strong> Course Project</strong>
+  <strong> <u>Course Project</u></strong>
      <br/>
  
   
- The Data is project from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
+ The Data for this project is from (https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip)
  
  
- <mark>The file run_analysis.R does the following to clean up the data:</mark>
+ <mark style="color:blue">The file run_analysis.R does the following to clean up the data:</mark>
 
  <li> Merges the training (train/X_train.txt) and test (test/X_test.txt) sets to create one data set. This gives a 10299x561 data frame. This is the same as the information in the original description which states that number of instances is 10299" and number of attributes is 561 </li>
  
@@ -23,7 +23,7 @@ This is a cood book that describes the variables, the data and the procedures us
  
  <li> Reads activity_labels.txt, changes the characters to lower case for readability and removes underscore. Then, it applies descriptive activity names to name the activities in the data set. The names of activities are 
  
-walking, walkingupstairs, walkingdownstairs, sitting, standing and laying.<li>
+walking, walkingupstairs, walkingdownstairs, sitting, standing and laying.</li>
  
  
 <li>The script run_analysis.R appropriately labels the data set with descriptive names.The script merges the 10299x66 data frame containing the features with the activity labels and subject IDs, which are both 10299x1 data frames. This sttep creates the file "merged_and_cleaned_data.txt". This file a 10299x68 data frame. In "merged_and_cleaned_data.txt" the first column is subject IDs, the second column is activity names, and the last 66 columns are measurements. The names are the following: tbodyacc-mean-x, tbodyacc-mean-y, tbodyacc-mean-z, tbodyacc-std-x,tbodyacc-std-y, tbodyacc-std-z, tgravityacc-mean-x, and tgravityacc-mean-y. Subject IDs are integers between 1 and 30 inclusive.</li>
