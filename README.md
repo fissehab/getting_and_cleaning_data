@@ -25,7 +25,9 @@ This is a repository for the Getting and Cleaning Data Coursera course project t
     
  
  <li> To read in the cleaned data created for this project in R, use
- tidy <- read.table("merged_and_cleaned_data_average_activity.txt"). Since there are 30 subjects and 6 activities, tidy is 180*68  as "for each activity and each subject" gives 30 * 6 = 180 rows.
+ tidy <- read.table("merged_and_cleaned_data_average_activity.txt"). 
  </li>
+ 
+ <li>Since there are 30 subjects and 6 activities, tidy is 180*68  as "for each activity and each subject" gives 30 * 6 = 180 rows.</li>
  
  </ul>
