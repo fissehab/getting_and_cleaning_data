@@ -1,55 +1,55 @@
-# Getting and Cleaning Data course project
+#  Getting and Cleaning Data course project
 # dataset used for this project:
-  # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-
-# set working directory
-
-setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project")
-
-rm(list=ls())  # clear workspace
-
-# Load required libraries
-
-require(downloader)
-library(plyr)
-
-# Download the dataset as Dataset.zip.
-# But first check if the folder of unzipped Dataset.zip is present
-# else download it.
-
-if (!dir.exists("UCI HAR Dataset")){
-        #"UCI HAR Dataset" is the directory created after unzipping Dataset.zip
-
-    url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-
-    download(url, dest="Dataset.zip") 
-
-    unzip ("Dataset.zip")
-
-}
-
-dir()       # see the list of files and folders
-
-# change directory to "UCI HAR Dataset" which is created
-# after unzipping Dataset.zip
-
-setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project/UCI HAR Dataset")
-
-dir()                # see the list of files and folders   
-
-list.files("./train")    # see contents of the "train" folder 
-
-list.files("./test")     #see contents of the "test" folder
-
-
-# "README.txt" contains detailed information about the datasets.
-# Files in the Inertial Signals folders are not being used here.
-# The relationship between the different files used in this analysis 
-# is shown in the Figure with the README.md
-#  Activity, Subject and Features as part of descriptive variable names 
-# for the data frame to be created.
+#    https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+# 
+#  #set working directory
+#  
+# setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project")
+# 
+# rm(list=ls())  # clear workspace
+# 
+# # Load required libraries
+# require(downloader)
+#  Download the dataset as Dataset.zip.
+#  But first check if the folder of unzipped Dataset.zip is present
+#  else download it.
+# 
+# if (!dir.exists("UCI HAR Dataset")){
+#         #"UCI HAR Dataset" is the directory created after unzipping Dataset.zip
+# 
+#     url<-"https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
+# 
+#     download(url, dest="Dataset.zip") 
+# 
+#     unzip ("Dataset.zip")
+# 
+# }
+# 
+# dir()       # see the list of files and folders
+# 
+# # change directory to "UCI HAR Dataset" which is created
+# # after unzipping Dataset.zip
+# 
+# setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project/UCI HAR Dataset")
+# 
+# dir()                # see the list of files and folders   
+# 
+# list.files("./train")    # see contents of the "train" folder 
+# 
+# list.files("./test")     #see contents of the "test" folder
+# 
+# 
+# # "README.txt" contains detailed information about the datasets.
+# # Files in the Inertial Signals folders are not being used here.
+# # The relationship between the different files used in this analysis 
+# # is shown in the Figure with the README.md
+# #  Activity, Subject and Features as part of descriptive variable names 
+# # for the data frame to be created.
 
 # 1. Merge the training and the test sets to create one data set
+
+
+library(plyr)
 
 X_train <- read.table("train/X_train.txt")
 X_test <- read.table("test/X_test.txt")
