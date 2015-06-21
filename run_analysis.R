@@ -2,6 +2,9 @@
 # dataset used for this project:
   # https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
 
+# set working directory
+
+setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project")
 
 rm(list=ls())  # clear workspace
 
@@ -28,9 +31,10 @@ if (!dir.exists("UCI HAR Dataset")){
 
 dir()       # see the list of files and folders
 
-# "UCI HAR Dataset" is created
+# change directory to "UCI HAR Dataset" which is created
 # after unzipping Dataset.zip
 
+setwd("C:/Fish/classes/summer_2015/getting_cleaning_data/project/UCI HAR Dataset")
 
 dir()                # see the list of files and folders   
 
@@ -121,7 +125,7 @@ names(Subject) <- "subject"
 
 # Now, let's create a data frame and save it as merged_and_cleaned_data.txt
 
-clean <- cbind(Subject,Y,X)
+clean <- cbind(Subject,Y,extracted)
 
 write.table(clean, file="merged_and_cleaned_data.txt",row.name=FALSE)
 
@@ -137,3 +141,5 @@ dim(clean)
 clean2<-aggregate(. ~subject + activity, clean, mean)
 clean2<-clean2[order(clean2$subject,clean2$activity),]
 write.table(clean2, file = "merged_and_cleaned_data_average_activity.txt",row.name=FALSE)
+
+dim(clean2)
