@@ -1,6 +1,7 @@
 # getting_and_cleaning_data
 
 This is a repository for the Getting and Cleaning Data Coursera course project through Johns Hopkins University.
+Verified certificate available at: https://www.coursera.org/account/accomplishments/records/XUjjn3fNRZ2EZK4y
               <br/>
               <br/>
   
